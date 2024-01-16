@@ -30,3 +30,27 @@ Follow these instructions to get a copy of the project up and running on your lo
 ### Installation
 
 1. **Clone the Repository**
+
+
+### Project structure
+```
+.
+├── commands.txt
+├── docker-compose.yml
+├── Dockerfile
+├── README.md
+├── requirements.txt
+└── src
+    ├── apps
+    │   ├── __init__.py
+    │   └── main.py
+    ├── grpc_services
+    │   ├── __init__.py
+    │   ├── restaurant_service_pb2_grpc.py
+    │   ├── restaurant_service_pb2.py
+    │   ├── restaurant_service.proto
+    │   └── restaurant_service.py
+    ├── proto
+    └── tests
+        └── __init__.py
+```

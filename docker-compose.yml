@@ -1,0 +1,14 @@
+version: '3.10'
+services:
+  web:
+    build: .
+    ports:
+      - "8000:80"
+    restart: always
+
+  grpc:
+    build: .
+    command: python run_grpc_server.py
+    restart: always
+    ports:
+      - "50051:50051"

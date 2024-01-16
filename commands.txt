@@ -1,0 +1,17 @@
+FastAPI --> uvicorn src.apps.main:app --reload
+gRPC --> python run_grpc_server.py
+Docker --> {
+    1. docker compose up --build --> {To build and run from scratch. no pbm if exists.}
+    2. docker compose up --build -d [service_name] --> {To run a specific container.}
+    3. docker compose up -d --> {This will create and start the containers }
+    4. docker compose down --> {This command stops and removes all the containers, networks, and volumes defined in your docker-compose.yml file}
+    5. docker compose stop --> { If you want to stop the containers but do not want to remove them}
+
+}
+
+
+Common:
+Generate python file for .proto --> python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. src/grpc_services/restaurant_service.proto
+To generate project tree excuding venv, pycache --> tree -I 'venv|__pycache__'
+
+

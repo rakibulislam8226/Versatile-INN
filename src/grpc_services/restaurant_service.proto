@@ -1,0 +1,17 @@
+// restaurant_service.proto
+
+syntax = "proto3";
+
+package restaurant;
+
+service RestaurantService {
+  rpc CreateRestaurant (CreateRestaurantRequest) returns (RestaurantResponse);
+}
+
+message CreateRestaurantRequest {
+  string name = 1;
+}
+
+message RestaurantResponse {
+  string message = 1;
+}
